@@ -1,0 +1,17 @@
+public class Main {
+    public static void main (String[] args){
+        Employee[] emplArray = new Employee[5]; // Вначале объявляем массив объектов
+        emplArray[0] = new Employee("Алексей Локоленков", "Менеджер", "alloc@mail.com", "8-999-231-23-12", 60000, 42);
+        emplArray[1] = new Employee("Юрий Холин", "Разработчик", "yur@mail.com", "8-998-123-12-12",70000,25);
+        emplArray[2] = new Employee("Дмитрий Скуратов", "Начальник отдела", "ds@mail.com", "8-999-321-21-21", 90000, 44);
+        emplArray[3] = new Employee("Елена Горина", "Секретарь", "elgor@mail.com", "8-999-432-32-21", 45000, 22);
+        emplArray[4] = new Employee("Ксения Сонина", "HR", "hr@mail.com","8-996-567-34-23", 69000, 27);
+
+        for (int i = 0; i < emplArray.length; i++){
+            if (emplArray[i].getAge() > 40){
+                emplArray[i].work();
+                emplArray[i].printInfo();
+            }
+        }
+    }
+}
